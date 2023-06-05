@@ -1,10 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
+    <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -38,15 +34,56 @@
     </v-app-bar>
 
     <v-main>
-      <router-view/>
+      <div id="app">
+        <div id="nav">
+          <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+              <img
+                src="@/assets/GreenBin.png"
+                width="35"
+                height="35"
+                class="d-inline-block align-top"
+                alt=""
+              />
+              Green Bin
+            </a>
+          </nav>
+          <router-link to="/">Home</router-link>
+          <router-link to="/login">Login</router-link>
+          <router-link to="/signup">Signup</router-link>
+        </div>
+        <router-view />
+      </div>
     </v-main>
   </v-app>
 </template>
 
-<script>
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
 
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
+</style>
+
+<script>
 export default {
-  name: 'App',
+  name: "App",
 
   data: () => ({
     //
