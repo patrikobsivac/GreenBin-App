@@ -1,38 +1,64 @@
 <template>
-  <div class="about">
-    <h1>This is an login page</h1>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm"></div>
-        <div class="col-sm">
-          <form>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input
+  <v-container class="fill-height" fluid>
+    <v-row align="center" justify="center" dense>
+      <v-col cols="12" sm="8" md="4" lg="4">
+        <v-card elevation="0">
+          <div class="text-center">
+            <h1 class="mb-2">Login</h1>
+          </div>
+          <a
+            href="#"
+            name="Fedorae Education"
+            title="Green Bin"
+            target="_blank"
+          >
+            <v-img
+              src="@/assets/recycle.png"
+              alt="Green Bin App"
+              contain
+              height="200"
+            ></v-img>
+          </a>
+          <v-card-text>
+            <v-form>
+              <v-text-field
+                label="E-Mail"
+                name="email"
+                prepend-inner-icon="mdi-email"
                 type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="Enter email"
-              />
-              <small id="emailHelp" class="form-text text-muted"
-                >We'll never share your email with anyone else.</small
-              >
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input
+                class="rounded-0"
+                outlined
+              ></v-text-field>
+              <v-text-field
+                label="Lozinka"
+                name="password"
+                prepend-inner-icon="mdi-lock"
                 type="password"
-                class="form-control"
-                id="exampleInputPassword1"
-                placeholder="Password"
-              />
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
-        <div class="col-sm"></div>
-      </div>
-    </div>
-  </div>
+                class="rounded-0"
+                outlined
+              ></v-text-field>
+              <v-btn class="rounded-0" color="#000000" x-large block dark
+                >Login</v-btn
+              >
+              <v-card-actions class="text--secondary">
+                <v-spacer></v-spacer>
+                <!-- <router-link :to="{ name: 'SignUp' }">Sign Up</router-link> -->
+                Nemate racun?
+                <a href="#" class="pl-2" style="color: #000000">Registriraj</a>
+              </v-card-actions>
+            </v-form>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
+
+<script>
+export default {
+  name: "app-login",
+};
+</script>
+
+<style lang="css" scoped>
+</style>
