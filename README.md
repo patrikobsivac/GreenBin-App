@@ -8,7 +8,7 @@ Web aplikacija za rasporeda odvoza otpada
 
 ### Prototip aplikacije
 
-Figma: https://figma.com/...
+Adobe XD: https://xd.adobe.com/view/f8c1eeec-8fc0-434b-8202-cb2ba58ef10c-ad92/
 
 ### Javni link na aplikaciju
 

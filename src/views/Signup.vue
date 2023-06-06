@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is an signup page</h1>
+  <div class="signup">
+    <h1>This is a Signup page</h1>
     <div class="container">
       <div class="row">
         <div class="col-sm"></div>
@@ -12,7 +12,7 @@
                 type="email"
                 class="form-control"
                 id="exampleInputEmail1"
-                aria-describedby="emailHelp"
+                v-model="email"
                 placeholder="Enter email"
               />
               <small id="emailHelp" class="form-text text-muted"
@@ -25,10 +25,16 @@
                 type="password"
                 class="form-control"
                 id="exampleInputPassword1"
+                v-model="password"
                 placeholder="Password"
               />
+              <small id="passwordHelp" class="form-text text-muted"
+                >Password must be at least 8 characters.</small
+              >
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" @click="submitForm()">
+              Submit
+            </button>
           </form>
         </div>
         <div class="col-sm"></div>
@@ -36,3 +42,17 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    submitForm() {},
+  },
+};
+</script>
