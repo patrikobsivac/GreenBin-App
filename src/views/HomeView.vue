@@ -3,6 +3,8 @@
     <v-main>
       <v-container>
         <h1>Green Bin</h1>
+        <p>Web aplikacija za rasporeda odvoza otpada</p>
+        <br />
         <v-btn color="red" class="mx-1" a href="/login">{{
           loginBtnText
         }}</v-btn>
