@@ -21,6 +21,7 @@
                 name="name"
                 prepend-inner-icon="mdi-account"
                 type="text"
+                v-model="name"
                 class="rounded-0"
                 outlined
               ></v-text-field>
@@ -29,6 +30,7 @@
                 name="email"
                 prepend-inner-icon="mdi-email"
                 type="email"
+                v-model="username"
                 class="rounded-0"
                 outlined
               ></v-text-field>
@@ -37,6 +39,7 @@
                 name="password"
                 prepend-inner-icon="mdi-lock"
                 type="password"
+                v-model="password"
                 class="rounded-0"
                 outlined
               ></v-text-field>
@@ -45,17 +48,26 @@
                 name="password"
                 prepend-inner-icon="mdi-lock-outline"
                 type="password"
+                v-model="passwordRpt"
                 class="rounded-0"
                 outlined
               ></v-text-field>
-              <v-btn class="rounded-0" color="#000000" x-large block dark
-                >Registriraj se</v-btn
+              <v-btn
+                type="button"
+                @click="signup"
+                class="rounded-0"
+                color="#000000"
+                x-large
+                block
+                dark
               >
+                Submit
+              </v-btn>
               <v-card-actions class="text--secondary">
                 <v-spacer></v-spacer>
                 <!-- <router-link :to="{ name: 'SignUp' }">Sign Up</router-link> -->
-                Već imate racun?
-                <a href="#" class="pl-2" style="color: #000000">Sign In</a>
+                Već imate račun?
+                <a href="/login" class="pl-2" style="color: #000000">Login</a>
               </v-card-actions>
             </v-form>
           </v-card-text>
@@ -66,8 +78,33 @@
 </template>
 
 <script>
+import { firebase } from "@/firebase";
+//import * as firebase from "firebase/app";
+
 export default {
-  name: "app-register",
+  name: "Signup",
+  data() {
+    return {
+      name: "",
+      username: "",
+      password: "",
+      passwordRpt: "",
+    };
+  },
+  methods: {
+    signup() {
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(this.username, this.password)
+        .then(function () {
+          console.log("Uspješna registracija");
+        })
+        .catch(function (error) {
+          console.error("Došlo je do greške", error);
+        });
+      console.log("Nastavak");
+    },
+  },
 };
 </script>
 
