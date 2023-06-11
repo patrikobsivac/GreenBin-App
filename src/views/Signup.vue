@@ -76,16 +76,15 @@
                 x-large
                 block
                 dark
-                a
-                href="#"
               >
                 KREIRAJ
               </v-btn>
               <v-card-actions class="text--secondary">
                 <v-spacer></v-spacer>
-                <!-- <router-link :to="{ name: 'SignUp' }">Sign Up</router-link> -->
                 Već imate račun?
-                <a href="#" class="pl-2" style="color: #000000">Login</a>
+                <a href="/login" class="pl-2" style="color: whitesmoke"
+                  >Login</a
+                >
               </v-card-actions>
             </v-form>
           </v-card-text>
@@ -96,8 +95,6 @@
 </template>
 
 <script>
-//import { firebase } from "@/firebase";
-//import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { createUserWithEmailAndPassword, auth, db } from "/firebase.js";
 export default {
   name: "Signup",
@@ -111,11 +108,12 @@ export default {
   },
   methods: {
     signup() {
-      firebase
-        .auth()
-        .createUserWithEmailAndPassword(this.username, this.password)
+      createUserWithEmailAndPassword(auth, this.username, this.password)
         .then(function () {
           console.log("Uspješna registracija");
+        })
+        .then(() => {
+          this.$router.push({ path: "/login" });
         })
         .catch(function (error) {
           console.error("Došlo je do greške", error);
@@ -133,6 +131,10 @@ export default {
 }
 
 .text-center {
-  color: gray;
+  color: whitesmoke;
+}
+
+#nav a {
+  color: white;
 }
 </style>

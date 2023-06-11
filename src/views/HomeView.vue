@@ -36,11 +36,27 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #181a1b;
+  /* background-color: #181a1b; */
 }
 
 .py-5 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.container[data-v-9ea40744] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #232425;
+}
+
+p {
+  color: whitesmoke;
+}
+
+h1 {
+  color: whitesmoke;
 }
 </style>

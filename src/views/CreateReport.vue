@@ -1,97 +1,113 @@
 <template>
-  <v-card text-align="center">
-    <v-card-title>Kanta za smeće</v-card-title>
-    <v-card-actions>
-      <v-form @submit.prevent="onSubmit">
+  <div class="text-center">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h1>Prijava kante za smeće</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <v-text-field label="ID" v-model="kanta.id"></v-text-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
         <v-text-field
-          name="id"
-          v-model="id"
-          :rules="rules"
-          label="ID kante"
-          text-align="center"
-        />
-        <v-text-field
-          name="kapacitet"
-          v-model="kapacitet"
-          :rules="rules"
           label="Kapacitet"
-          text-align="center"
-        />
-        <v-text-field
-          name="adresa"
-          v-model="adresa"
-          :rules="rules"
-          label="Adresa"
-          text-align="center"
-        />
-        <v-btn align="center" name="pretrazi" type="submit" text-align="center"
-          >Pretrazi i provjeri</v-btn
-        >
-        <v-btn name="posalji" type="submit" text-align="center"
-          >Pošalji adresu</v-btn
-        >
-        <v-btn
-          color="success"
-          class="mx-0"
-          name="potvrdi"
-          type="submit"
-          text-align="center"
-        >
-          Potvrdi
+          v-model="kanta.kapacitet"
+        ></v-text-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <v-text-field label="Adresa" v-model="kanta.adresa"></v-text-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <v-btn type="button" @click="pretraziKante()" color="primary"
+          >Pretraži
         </v-btn>
-        <v-card-text text-align="center">
-          <br />
-          <v-btn
-            v-for="btn in btns"
-            :key="btn.text"
-            color="primary"
-            text-align="center"
-          >
-            {{ btn.text }}
-          </v-btn>
-        </v-card-text>
-      </v-form>
-    </v-card-actions>
-  </v-card>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <v-btn type="button" @click="posaljiAdresu('neki radnik')"
+          >Pošalji adresu
+        </v-btn>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <v-btn
+          type="button"
+          @click="provjeriPrijavu()"
+          :disabled="!checkForm()"
+          color="success"
+          a
+          href="/menu"
+          >Prijavi
+        </v-btn>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
+//import firebase from "firebase";
+import { doc, db } from "/firebase.js";
 export default {
   data() {
     return {
-      id: "",
-      kapacitet: "",
-      adresa: "",
-      btns: [{ text: "Kreiraj prijavu smeća" }],
-      rules: [(v) => !!v || "Ovo polje je obavezno."],
+      kanta: {
+        id: "",
+        kapacitet: "",
+        adresa: "",
+      },
     };
   },
   methods: {
-    onSubmit() {
-      if ((this.id, this.kapacitet, this.adresa)) {
-        axios
-          .post("#", {
-            id: this.id,
-            kapacitet: this.kapacitet,
-            adresa: this.adresa,
-          })
-          .then((response) => {
-            console.log(response);
-            alert("Uspješno ste kreirali prijavu smeća");
-          })
-          .catch((error) => {
-            console.log(error.response);
-            alert("Greška pri kreiranju prijave smeća");
-          });
+    pretraziKante() {
+      const db = firebase.firestore();
+      const kantecollection = collection(db, "kante");
+
+      kantecollection
+        .where("id", "==", this.kanta.id)
+        .get()
+        .then((doc) => {
+          if (doc.empty) {
+            console.log("Kanta ne postoji.");
+          } else {
+            console.log("Kanta postoji");
+          }
+        });
+    },
+
+    posaljiAdresu(radnik) {
+      console.log(radnik + " je primio adresu");
+    },
+
+    provjeriPrijavu() {
+      console.log(" Prijava je provjerena");
+    },
+    checkForm: function () {
+      if (
+        this.kanta.id !== "" &&
+        this.kanta.kapacitet !== "" &&
+        this.kanta.adresa !== ""
+      ) {
+        return true;
+      } else {
+        return false;
       }
     },
   },
 };
 </script>
 
-<style scoped>
-.centered-input >>> input {
+<style>
+.text-center {
   text-align: center;
+  margin-top: 1rem;
 }
 </style>
-

@@ -47,7 +47,7 @@
                 class="rounded-0"
                 color="#000000"
                 a
-                href="/menu"
+                href="#"
                 x-large
                 block
                 dark
@@ -69,7 +69,7 @@
                 <router-link
                   :to="{ name: 'SignUp' }"
                   class="pl-2"
-                  style="color: #000000"
+                  style="color: white"
                   target="_blank"
                   a
                   href="/signup"
@@ -77,7 +77,6 @@
                   Registriraj
                 </router-link>
               </v-card-actions>
-              <!-- <router-link :to="{ name: 'SignUp' }">Sign Up</router-link> -->
             </v-form>
           </v-card-text>
         </v-card>
@@ -87,7 +86,8 @@
 </template>
 
 <script>
-import { firebase } from "/firebase";
+//import { firebase } from "/firebase";
+import { signInWithEmailAndPassword, auth, db } from "/firebase.js";
 export default {
   name: "login",
   data() {
@@ -105,12 +105,10 @@ export default {
         this.showAlert = true;
       } else {
         console.log("login..." + this.username);
-        firebase
-          .auth()
-          .signInWithEmailAndPassword(this.username, this.password)
+        signInWithEmailAndPassword(auth, this.username, this.password)
           .then((result) => {
             console.log("Uspješna prijava", result);
-            this.$router.push({ name: "menu" });
+            this.$router.push({ path: "/menu" });
           })
           .catch(function (e) {
             console.error("Greška", e);
@@ -125,5 +123,9 @@ export default {
 .login-card {
   padding: 20px;
   background-color: #272a2b;
+}
+
+.mb-2 {
+  color: whitesmoke;
 }
 </style>

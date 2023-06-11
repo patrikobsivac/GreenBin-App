@@ -3,6 +3,10 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Login from '../views/Login.vue'
 import Signup from '../views/Signup.vue'
+import Menu from '../views/Menu.vue'
+import RouteBin from '../views/RouteBin.vue'
+import CreateReport from '../views/CreateReport.vue'
+import Status from '../views/Status.vue'
 
 Vue.use(VueRouter)
 
@@ -59,14 +63,6 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/RouteBin.vue')
-  },
-  {
-    path: '/secret',
-    name: 'test',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/test.vue')
   },
 ]
 

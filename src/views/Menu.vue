@@ -1,6 +1,8 @@
 <template>
   <div class="center">
     <div>
+      <h1>Menu</h1>
+      <br /><br />
       <v-btn
         large
         class="mx-2"
@@ -8,7 +10,7 @@
         a
         href="/report"
         @click="changePage('page1')"
-        >Kanta za smeće</v-btn
+        >Prijava Smeća</v-btn
       >
       <v-btn
         large

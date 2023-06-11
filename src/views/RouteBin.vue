@@ -16,7 +16,14 @@
         ></v-text-field>
       </v-col>
     </v-row>
-    <v-btn @click="calculateRoute">Izračunaj rutu</v-btn>
+    <v-btn
+      a
+      href="/menu"
+      @click="calculateRoute"
+      :disabled="start_point === '' || end_point === ''"
+    >
+      Izračunaj rutu
+    </v-btn>
   </v-container>
 </template> 
 
@@ -56,6 +63,10 @@ export default {
       this.id_route = start_point + "_" + end_point;
       this.distance = dist;
       this.time_between = time;
+
+      let message = `Ruta je ${this.start_point} - ${this.end_point}, Udaljenost je ${dist} i
+                   Vrijeme potrebno za prijelaz ove dvije točke je ${time}`;
+      alert(message);
     },
 
     getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {

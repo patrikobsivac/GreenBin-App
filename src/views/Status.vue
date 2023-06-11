@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { firebase } from "/firebase";
+import { firestore, collection, db } from "/firebase.js";
 export default {
   data() {
     return {
@@ -57,7 +57,21 @@ export default {
   },
   methods: {
     getStatus() {
-      console.log("Status je jos uvijek nepoznat"); //tu se treba raditi logika
+      const db = firebase.firestore();
+      collection(db, "smeca")
+        .add({
+          brojKamiona: this.brojKamiona,
+          imeVozaca: this.imeVozaca,
+          datum: this.datum,
+          pregledPrijave: this.pregledPrijave,
+          pregledAdrese: this.pregledAdrese,
+        })
+        .then(() => {
+          console.log("Uspješno dodano u bazu podataka");
+        })
+        .catch((error) => {
+          console.log("Došlo je do pogreške: ", error);
+        });
     },
   },
 };
@@ -75,5 +89,14 @@ h1 {
 v-btn {
   margin-top: 20px;
   width: 100%;
+}
+
+v-text-field {
+  background-color: white;
+  color: #666;
+}
+
+#label {
+  background-color: white;
 }
 </style>
