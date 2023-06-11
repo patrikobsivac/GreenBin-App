@@ -1,17 +1,21 @@
 <template>
-  <v-app>
-    <v-main>
-      <v-container>
-        <h1>Green Bin</h1>
-        <p>Web aplikacija za rasporeda odvoza otpada</p>
-        <br />
-        <v-btn color="red" class="mx-1" a href="/login">{{
+  <v-app style="background-color: #181a1b">
+    <v-main class="container">
+      <h1 class="display-4">Green Bin</h1>
+      <p class="lead">Web aplikacija za rasporeda odvoza otpada</p>
+      <v-row class="py-5" justify="center">
+        <v-btn color="red" class="mx-4" a href="/login" style="color: white">{{
           loginBtnText
         }}</v-btn>
-        <v-btn color="blue" class="mx-1" a href="/signup">{{
-          signupBtnText
-        }}</v-btn>
-      </v-container>
+        <v-btn
+          color="blue"
+          class="mx-4"
+          a
+          href="/signup"
+          style="color: white"
+          >{{ signupBtnText }}</v-btn
+        >
+      </v-row>
     </v-main>
   </v-app>
 </template>
@@ -26,3 +30,17 @@ export default {
 };
 </script>
 
+<style scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #181a1b;
+}
+
+.py-5 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+</style>

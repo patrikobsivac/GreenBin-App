@@ -69,7 +69,20 @@ export default {
   methods: {
     onSubmit() {
       if ((this.id, this.kapacitet, this.adresa)) {
-        // nesta da se posalje
+        axios
+          .post("#", {
+            id: this.id,
+            kapacitet: this.kapacitet,
+            adresa: this.adresa,
+          })
+          .then((response) => {
+            console.log(response);
+            alert("Uspješno ste kreirali prijavu smeća");
+          })
+          .catch((error) => {
+            console.log(error.response);
+            alert("Greška pri kreiranju prijave smeća");
+          });
       }
     },
   },

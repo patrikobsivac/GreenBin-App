@@ -1,48 +1,60 @@
 <template>
-  <div>
-    <v-row>
-      <v-col cols="12" sm="6" md="4">
-        <v-btn
-          block
-          rounded="lg"
-          size="x-large"
-          href="#"
-          color="primary"
-          class="px-4"
-        >
-          Option 1
-        </v-btn>
-      </v-col>
-      <v-col cols="12" sm="6" md="4">
-        <v-btn
-          block
-          rounded="lg"
-          size="x-large"
-          href="#"
-          color="primary"
-          class="px-4"
-        >
-          Option 2
-        </v-btn>
-      </v-col>
-      <v-col cols="12" sm="6" md="4">
-        <v-btn
-          block
-          rounded="lg"
-          size="x-large"
-          href="#"
-          color="primary"
-          class="px-4"
-        >
-          Option 3
-        </v-btn>
-      </v-col>
-    </v-row>
+  <div class="center">
+    <div>
+      <v-btn
+        large
+        class="mx-2"
+        color="primary"
+        a
+        href="/report"
+        @click="changePage('page1')"
+        >Kanta za smeće</v-btn
+      >
+      <v-btn
+        large
+        class="mx-2"
+        color="primary"
+        a
+        href="/route"
+        @click="changePage('page2')"
+        >Ruta smeća</v-btn
+      >
+      <v-btn
+        large
+        class="mx-2"
+        color="primary"
+        a
+        href="/status"
+        @click="changePage('page3')"
+        >Status</v-btn
+      >
+      <v-btn
+        large
+        class="mx-2"
+        color="primary"
+        a
+        href="/"
+        @click="changePage('page4')"
+        >Logout</v-btn
+      >
+    </div>
   </div>
 </template>
 
 <style>
-.rounded {
-  margin-bottom: 10px;
+.center {
+  text-align: center;
 }
 </style>
+
+<script>
+export default {
+  methods: {
+    changePage(page) {
+      this.$router.push({
+        name: page,
+      });
+    },
+  },
+};
+</script>
