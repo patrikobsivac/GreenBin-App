@@ -128,4 +128,9 @@ export default {
 .mb-2 {
   color: whitesmoke;
 }
+
+.theme--light.v-input input,
+.theme--light.v-input textarea {
+  color: rgb(255 255 255 / 87%);
+}
 </style>

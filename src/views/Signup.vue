@@ -19,7 +19,7 @@
               height="200"
             ></v-img>
           </a>
-          <v-card-text>
+          <v-card-text class="text-white">
             <v-form>
               <v-text-field
                 style
@@ -136,5 +136,10 @@ export default {
 
 #nav a {
   color: white;
+}
+
+.theme--light.v-input input,
+.theme--light.v-input textarea {
+  color: rgb(255 255 255 / 87%);
 }
 </style>
