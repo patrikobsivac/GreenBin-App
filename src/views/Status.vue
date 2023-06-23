@@ -7,7 +7,7 @@
           <v-text-field label="Broj kamiona" v-model="brojKamiona" outlined />
         </v-col>
         <v-col cols="10">
-          <v-text-field label="Ime vozaca" v-model="imeVozaca" outlined />
+          <v-text-field label="Ime vozača" v-model="imeVozaca" outlined />
         </v-col>
         <v-col cols="10">
           <v-select :items="datum" label="Datum" outlined />
@@ -27,7 +27,13 @@
           />
         </v-col>
       </v-row>
-      <v-btn type="button" :items="items" color="primary" @click="getStatus"
+      <v-btn
+        type="button"
+        :items="items"
+        color="primary"
+        @click="getStatus"
+        a
+        href="/menu"
         >Status</v-btn
       >
     </v-form>
