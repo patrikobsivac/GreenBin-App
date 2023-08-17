@@ -4,7 +4,7 @@ Web aplikacija za rasporeda odvoza otpada
 
 ### Autori i zaduženja
 
--   **Patrik Tovernić Obšivač** (pobsivac@unipu.hr)
+-   **Patrik Tovernić Obšivač** (pobsivac@student.unipu.hr)
 
 ### Prototip aplikacije
 
