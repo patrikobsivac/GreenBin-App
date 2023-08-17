@@ -4,15 +4,20 @@
       <h1 class="display-4">Green Bin</h1>
       <p class="lead">Web aplikacija za rasporeda odvoza otpada</p>
       <v-row class="py-5" justify="center">
-        <v-btn color="red" class="mx-4" a href="/login" style="color: white">{{
-          loginBtnText
-        }}</v-btn>
         <v-btn
-          color="blue"
+          color="green"
+          class="mx-4"
+          a
+          href="/login"
+          style="color: white"
+          >{{ loginBtnText }}</v-btn
+        >
+        <v-btn
+          color="white"
           class="mx-4"
           a
           href="/signup"
-          style="color: white"
+          style="color: black"
           >{{ signupBtnText }}</v-btn
         >
       </v-row>
@@ -49,7 +54,12 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #232425;
+  /* background-color: #232425; */
+  background-color: #dedede;
+}
+
+.lead {
+  color: gray;
 }
 
 p {
@@ -57,6 +67,6 @@ p {
 }
 
 h1 {
-  color: whitesmoke;
+  color: gray;
 }
 </style>

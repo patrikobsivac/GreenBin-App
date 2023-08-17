@@ -30,6 +30,7 @@
   text-align: center;
   // background-color: #181a1b;
   color: #2c3e50;
+  background-color: #dedede;
 }
 
 #nav {
@@ -51,6 +52,16 @@
   font-weight: bold;
   color: whitesmoke;
 }
+
+#nav navbar navbar-dark bg-dark {
+  background-color: #dedede;
+}
+
+.navbar-brand {
+  color: #343a40;
+}
+
+/* color: dedede; */
 </style>
 
 
