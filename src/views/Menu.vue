@@ -6,7 +6,7 @@
       <v-btn
         large
         class="mx-2"
-        color="primary"
+        color="green"
         a
         href="/report"
         @click="changePage('page1')"
@@ -15,7 +15,7 @@
       <v-btn
         large
         class="mx-2"
-        color="primary"
+        color="green"
         a
         href="/route"
         @click="changePage('page2')"
@@ -24,7 +24,7 @@
       <v-btn
         large
         class="mx-2"
-        color="primary"
+        color="green"
         a
         href="/status"
         @click="changePage('page3')"
@@ -33,7 +33,7 @@
       <v-btn
         large
         class="mx-2"
-        color="primary"
+        color="green"
         a
         href="/"
         @click="changePage('page4')"

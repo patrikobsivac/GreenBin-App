@@ -45,12 +45,13 @@
                 @click="login()"
                 :disabled="username.length == 0 || password.length < 3"
                 class="rounded-0"
-                color="#000000"
+                color="#ffffff"
+                background-color="#00000"
                 a
                 href="#"
                 x-large
                 block
-                dark
+                light
                 >Prijava</v-btn
               >
               <v-alert
@@ -69,7 +70,7 @@
                 <router-link
                   :to="{ name: 'SignUp' }"
                   class="pl-2"
-                  style="color: white"
+                  style="color: black"
                   target="_blank"
                   a
                   href="/signup"
@@ -126,11 +127,32 @@ export default {
 }
 
 .mb-2 {
-  color: whitesmoke;
+  color: blacksmoke;
 }
 
 .theme--light.v-input input,
 .theme--light.v-input textarea {
-  color: rgb(255 255 255 / 87%);
+  background-color: rgba(0, 0, 0, 0.87);
+}
+
+.login-card[data-v-26084dc2] {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.v-btn__content {
+  align-items: center;
+  color: black;
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: inherit;
+  line-height: normal;
+  position: relative;
+  transition: inherit;
+  transition-property: opacity;
+}
+
+.theme--dark.v-btn {
+  color: #000000;
 }
 </style>

@@ -64,6 +64,14 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/RouteBin.vue')
   },
+  {
+    path: '/address',
+    name: 'SendAddress',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/SendAddress.vue')
+  },
 ]
 
 const router = new VueRouter({

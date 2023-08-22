@@ -30,7 +30,7 @@
       <v-btn
         type="button"
         :items="items"
-        color="primary"
+        color="green"
         @click="getStatus"
         a
         href="/menu"
