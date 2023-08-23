@@ -7,6 +7,8 @@ import Menu from '../views/Menu.vue'
 import RouteBin from '../views/RouteBin.vue'
 import CreateReport from '../views/CreateReport.vue'
 import Status from '../views/Status.vue'
+import SendAddress from '../views/SendAddress.vue'
+import GoBack from "@/components/GoBack";
 
 Vue.use(VueRouter)
 

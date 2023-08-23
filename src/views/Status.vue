@@ -1,6 +1,7 @@
 <template>
   <v-container fluid>
     <h1>Prikupljanje smeća</h1>
+    <GoBack />
     <v-form>
       <v-row justify="center">
         <v-col cols="10">
@@ -42,7 +43,11 @@
 
 <script>
 import { firestore, collection, db } from "/firebase.js";
+import GoBack from "@/components/GoBack";
 export default {
+  components: {
+    GoBack,
+  },
   data() {
     return {
       items: ["Akcija", "Obrada", "Primljeno"],
@@ -86,7 +91,6 @@ export default {
 <style scoped>
 h1 {
   font-size: 30 px;
-  font-weight: bold;
   margin-bottom: 15px;
   text-align: center;
   color: #666;
