@@ -1,5 +1,6 @@
 <template>
   <div class="text-center">
+    <GoBack />
     <div class="row">
       <div class="col-lg-10 mx-auto">
         <h1>Prijava kante za smeće</h1>
@@ -54,9 +55,12 @@
 </template>
 
 <script>
-//import firebase from "firebase";
+import GoBack from "@/components/GoBack";
 import { doc, db } from "/firebase.js";
 export default {
+  components: {
+    GoBack,
+  },
   data() {
     return {
       kanta: {

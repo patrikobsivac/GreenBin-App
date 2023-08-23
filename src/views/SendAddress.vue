@@ -1,5 +1,6 @@
 <template>
   <div>
+    <GoBack />
     <v-row align="center" justify="center">
       <v-col cols="12">
         <v-card>
@@ -29,8 +30,12 @@
 </template>
 
 <script>
+import GoBack from "@/components/GoBack";
 import { db } from "/firebase.js";
 export default {
+  components: {
+    GoBack,
+  },
   data: () => ({
     address: "",
   }),
@@ -38,12 +43,10 @@ export default {
     async saveAddress() {
       const addressRef = db.collection("addresses").doc(this.address);
       const addressDoc = await addressRef.get();
-
       if (addressDoc.exists) {
         alert("Adresa vec postoji!");
         return;
       }
-
       addressRef
         .set({
           address: this.address,

@@ -72,19 +72,17 @@
                   password != passwordRepeat
                 "
                 class="rounded-0"
-                color="#000000"
+                color="#ffffff"
                 x-large
                 block
-                dark
+                light
               >
                 KREIRAJ
               </v-btn>
               <v-card-actions class="text--secondary">
                 <v-spacer></v-spacer>
                 Već imate račun?
-                <a href="/login" class="pl-2" style="color: whitesmoke"
-                  >Login</a
-                >
+                <a href="/login" class="pl-2" style="color: black">Login</a>
               </v-card-actions>
             </v-form>
           </v-card-text>
@@ -125,17 +123,37 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.signup-card {
+.signup-card[data-v-024d905c] {
   padding: 20px;
-  background-color: #272a2b;
+  background-color: #ffffff;
 }
 
-.text-center {
-  color: whitesmoke;
+h1.mb-2 {
+  color: blacksmoke;
 }
 
 #nav a {
   color: white;
+}
+
+#pl-2 {
+  color: blacksmoke;
+}
+
+.v-btn__content {
+  align-items: center;
+  color: black;
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: inherit;
+  line-height: normal;
+  position: relative;
+  transition: inherit;
+  transition-property: opacity;
+}
+
+.theme--dark.v-btn {
+  color: #000000;
 }
 
 .theme--light.v-input input,
