@@ -30,13 +30,7 @@
         @click="changePage('page3')"
         >Status</v-btn
       >
-      <v-btn
-        large
-        class="mx-2"
-        color="green"
-        a
-        href="/"
-        @click="changePage('page4')"
+      <v-btn large class="mx-2" color="green" a href="/" @click="logout()"
         >Logout</v-btn
       >
     </div>
@@ -50,12 +44,19 @@
 </style>
 
 <script>
+import { signOut, auth } from "/firebase.js";
 export default {
   methods: {
-    changePage(page) {
-      this.$router.push({
-        name: page,
-      });
+    logout() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.$router.push({ name: "login" });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     },
   },
 };

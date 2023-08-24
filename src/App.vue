@@ -21,6 +21,49 @@
   </v-app>
 </template>
 
+<script>
+import { auth, getAuth, onAuthStateChanged, signOut } from "/firebase.js";
+export default {
+  name: "App",
+  data() {
+    return {
+      isAuthenticated: false,
+      isAuthorized: false,
+      email: null,
+      searchQuery: "",
+      showRequest: false,
+      showAdd: false,
+    };
+  },
+  methods: {
+    signOut() {
+      const authInstance = getAuth();
+      signOut(authInstance)
+        .then(() => {
+          console.log("odjavljen");
+        })
+        .catch((error) => {
+          console.error("Pogreška odjave:", error);
+        });
+    },
+    preformSearch() {
+      console.log("Pretraga u tijeku", this.searchQuery);
+    },
+  },
+  beforeCreate() {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        console.log("Authenticated");
+        this.isAuthenticated = true;
+      } else {
+        console.log("Not authenticated");
+        this.isAuthenticated = false;
+      }
+    });
+  },
+};
+</script>
+
 
 <style lang="scss">
 #app {
