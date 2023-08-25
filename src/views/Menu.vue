@@ -30,6 +30,33 @@
         @click="changePage('page3')"
         >Status</v-btn
       >
+      <v-btn
+        large
+        class="mx-2"
+        color="green"
+        a
+        href="/address"
+        @click="changePage('page4')"
+        >Posalji Adresu</v-btn
+      >
+      <v-btn
+        large
+        class="mx-2"
+        color="green"
+        a
+        href="/razvrstaj"
+        @click="changePage('page5')"
+        >Razvrstaj</v-btn
+      >
+      <v-btn
+        large
+        class="mx-2"
+        color="green"
+        a
+        href="/kontakti"
+        @click="changePage('pag6')"
+        >Kontakti</v-btn
+      >
       <v-btn large class="mx-2" color="green" a href="/" @click="logout()"
         >Logout</v-btn
       >
@@ -52,7 +79,7 @@ export default {
         .auth()
         .signOut()
         .then(() => {
-          this.$router.replace({ name: "login" });
+          this.$router.push({ name: "home" });
         })
         .catch((err) => {
           console.log(err);

@@ -9,6 +9,7 @@ import CreateReport from '../views/CreateReport.vue'
 import Status from '../views/Status.vue'
 import SendAddress from '../views/SendAddress.vue'
 import Razvrstaj from '../views/Razvrstaj.vue'
+import Kontatki from '../views/Kontatki.vue'
 import GoBack from "@/components/GoBack";
 import { createRouter, createWebHistory } from 'vue-router';
 import { getAuth } from 'firebase/auth';
@@ -93,6 +94,15 @@ const routes = [
     path: '/razvrstaj',
     name: 'Razvrstaj',
     component: Razvrstaj,
+    meta: {
+      requiresAuth: true,
+    },
+    //component: () => import(/* webpackChunkName: "about" */ '../views/Razvrstaj.vue')
+  },
+  {
+    path: '/kontakti',
+    name: 'Kontakti',
+    component: Kontatki,
     meta: {
       requiresAuth: false,
     },
