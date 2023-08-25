@@ -8,86 +8,110 @@ import RouteBin from '../views/RouteBin.vue'
 import CreateReport from '../views/CreateReport.vue'
 import Status from '../views/Status.vue'
 import SendAddress from '../views/SendAddress.vue'
+import Razvrstaj from '../views/Razvrstaj.vue'
 import GoBack from "@/components/GoBack";
+import { createRouter, createWebHistory } from 'vue-router';
+import { getAuth } from 'firebase/auth';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
+
+const auth = getAuth();
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: HomeView
+    component: HomeView,
+    meta: {
+      requiresAuth: false,
+    },
   },
   {
     path: '/login',
     name: 'Login',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
+    component: Login,
+    meta: {
+      requiresAuth: false,
+    },
+    //component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
   },
   {
     path: '/signup',
     name: 'Signup',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Signup.vue')
+    component: Signup,
+    meta: {
+      requiresAuth: false,
+    },
+    //component: () => import(/* webpackChunkName: "about" */ '../views/Signup.vue')
   },
   {
     path: '/menu',
     name: 'Menu',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Menu.vue')
+    component: Menu,
+    meta: {
+      requiresAuth: true,
+    },
+    //component: () => import(/* webpackChunkName: "about" */ '../views/Menu.vue')
   },
   {
     path: '/status',
     name: 'Status',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Status.vue')
+    component: Status,
+    meta: {
+      requiresAuth: true,
+    },
+    //component: () => import(/* webpackChunkName: "about" */ '../views/Status.vue')
   },
   {
     path: '/report',
     name: 'Report',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/CreateReport.vue')
+    component: CreateReport,
+    meta: {
+      requiresAuth: true,
+    },
+    //component: () => import(/* webpackChunkName: "about" */ '../views/CreateReport.vue')
   },
   {
     path: '/route',
     name: 'BinRoute',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/RouteBin.vue')
+    component: RouteBin,
+    meta: {
+      requiresAuth: true,
+    },
+    //component: () => import(/* webpackChunkName: "about" */ '../views/RouteBin.vue')
   },
   {
     path: '/address',
     name: 'SendAddress',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/SendAddress.vue')
+    component: SendAddress,
+    meta: {
+      requiresAuth: true,
+    },
+    //component: () => import(/* webpackChunkName: "about" */ '../views/SendAddress.vue')
   },
   {
     path: '/razvrstaj',
     name: 'Razvrstaj',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Razvrstaj.vue')
+    component: Razvrstaj,
+    meta: {
+      requiresAuth: true,
+    },
+    //component: () => import(/* webpackChunkName: "about" */ '../views/Razvrstaj.vue')
   },
-]
+];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
 
-export default router
+router.beforeEach((to, from, next) => {
+  if (to.meta.requiresAuth && !auth.currentUser) {
+    next('/login');
+  } else {
+    next();
+  }
+});
+
+export default router;
