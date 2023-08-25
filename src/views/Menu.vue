@@ -52,7 +52,7 @@ export default {
         .auth()
         .signOut()
         .then(() => {
-          this.$router.push({ name: "login" });
+          this.$router.replace({ name: "login" });
         })
         .catch((err) => {
           console.log(err);

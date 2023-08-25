@@ -1,6 +1,14 @@
 <template>
   <v-app style="background-color: #181a1b">
     <v-main class="container">
+      <v-img
+        src="@/assets/recycle.png"
+        alt="Green Bin App"
+        class="mx-auto"
+        contain
+        height="150"
+      ></v-img
+      ><br />
       <h1 class="display-4">Green Bin</h1>
       <p class="lead">Web aplikacija za rasporeda odvoza otpada</p>
       <v-row class="py-5" justify="center">

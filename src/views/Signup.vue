@@ -6,19 +6,12 @@
           <div class="text-center">
             <h1 class="mb-2">Signup</h1>
           </div>
-          <a
-            href="https://github.com/patrikobsivac/GreenBin-App"
-            name="Green Bin"
-            title="Green Bin"
-            target="_blank"
-          >
-            <v-img
-              src="@/assets/recycle.png"
-              alt="Green Bin"
-              contain
-              height="200"
-            ></v-img>
-          </a>
+          <v-img
+            src="@/assets/recycle.png"
+            alt="Green Bin"
+            contain
+            height="200"
+          ></v-img>
           <v-card-text class="text-white">
             <v-form>
               <v-text-field
@@ -82,7 +75,9 @@
               <v-card-actions class="text--secondary">
                 <v-spacer></v-spacer>
                 Već imate račun?
-                <a href="/login" class="pl-2" style="color: black">Login</a>
+                <a href="/login" class="pl-2" style="color: black"
+                  >Prijavite se</a
+                >
               </v-card-actions>
             </v-form>
           </v-card-text>

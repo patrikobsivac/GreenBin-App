@@ -4,7 +4,10 @@
       <div id="app">
         <div id="nav">
           <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">
+            <a
+              class="navbar-brand"
+              href="https://github.com/patrikobsivac/GreenBin-App"
+            >
               <img
                 src="@/assets/GreenBin.png"
                 width="35"
@@ -23,6 +26,14 @@
 
 <script>
 import { auth, getAuth, onAuthStateChanged, signOut } from "/firebase.js";
+import { RouterView } from "vue-router";
+import store from "@/store";
+
+onAuthStateChanged(auth, (user) => {
+  console.log("PROMJENA KORISNIKA", user);
+  store.current_user = user?.email;
+});
+
 export default {
   name: "App",
   data() {

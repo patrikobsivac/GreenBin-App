@@ -6,20 +6,12 @@
           <div class="text-center">
             <h1 class="mb-2">Prijava</h1>
           </div>
-          <a
-            href="https://github.com/patrikobsivac/GreenBin-App"
-            name="Green Bin"
-            title="Green Bin"
-            target="_blank"
-          >
-            <v-img
-              src="@/assets/recycle.png"
-              alt="Green Bin App"
-              class="mx-auto"
-              contain
-              height="200"
-            ></v-img>
-          </a>
+          <v-img
+            src="@/assets/recycle.png"
+            alt="Green Bin"
+            contain
+            height="200"
+          ></v-img>
           <v-card-text>
             <v-form>
               <v-text-field
@@ -75,7 +67,7 @@
                   a
                   href="/signup"
                 >
-                  Registriraj
+                  Registrirajte se
                 </router-link>
               </v-card-actions>
             </v-form>
@@ -87,7 +79,6 @@
 </template>
 
 <script>
-//import { firebase } from "/firebase";
 import { signInWithEmailAndPassword, auth, db } from "/firebase.js";
 export default {
   name: "login",

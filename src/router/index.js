@@ -94,7 +94,7 @@ const routes = [
     name: 'Razvrstaj',
     component: Razvrstaj,
     meta: {
-      requiresAuth: true,
+      requiresAuth: false,
     },
     //component: () => import(/* webpackChunkName: "about" */ '../views/Razvrstaj.vue')
   },
