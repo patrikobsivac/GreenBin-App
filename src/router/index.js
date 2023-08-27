@@ -9,7 +9,13 @@ import CreateReport from '../views/CreateReport.vue'
 import Status from '../views/Status.vue'
 import SendAddress from '../views/SendAddress.vue'
 import Razvrstaj from '../views/Razvrstaj.vue'
-import Kontatki from '../views/Kontatki.vue'
+import Kontakti from '../views/Kontakti.vue'
+import Papir from '../views/Papir.vue'
+import Plastika from '../views/Plastika.vue'
+import Mjesano from '../views/Mjesano.vue'
+import Staklo from '../views/Staklo.vue'
+import Metal from '../views/Metal.vue'
+import Tekstil from '../views/Tekstil.vue'
 import GoBack from "@/components/GoBack";
 import { createRouter, createWebHistory } from 'vue-router';
 import { getAuth } from 'firebase/auth';
@@ -27,6 +33,7 @@ const routes = [
       requiresAuth: false,
     },
   },
+
   {
     path: '/login',
     name: 'Login',
@@ -34,7 +41,7 @@ const routes = [
     meta: {
       requiresAuth: false,
     },
-    //component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
+
   },
   {
     path: '/signup',
@@ -43,7 +50,7 @@ const routes = [
     meta: {
       requiresAuth: false,
     },
-    //component: () => import(/* webpackChunkName: "about" */ '../views/Signup.vue')
+
   },
   {
     path: '/menu',
@@ -52,7 +59,7 @@ const routes = [
     meta: {
       requiresAuth: true,
     },
-    //component: () => import(/* webpackChunkName: "about" */ '../views/Menu.vue')
+
   },
   {
     path: '/status',
@@ -61,7 +68,7 @@ const routes = [
     meta: {
       requiresAuth: true,
     },
-    //component: () => import(/* webpackChunkName: "about" */ '../views/Status.vue')
+
   },
   {
     path: '/report',
@@ -70,7 +77,7 @@ const routes = [
     meta: {
       requiresAuth: true,
     },
-    //component: () => import(/* webpackChunkName: "about" */ '../views/CreateReport.vue')
+
   },
   {
     path: '/route',
@@ -79,7 +86,7 @@ const routes = [
     meta: {
       requiresAuth: true,
     },
-    //component: () => import(/* webpackChunkName: "about" */ '../views/RouteBin.vue')
+
   },
   {
     path: '/address',
@@ -88,7 +95,7 @@ const routes = [
     meta: {
       requiresAuth: true,
     },
-    //component: () => import(/* webpackChunkName: "about" */ '../views/SendAddress.vue')
+
   },
   {
     path: '/razvrstaj',
@@ -97,16 +104,63 @@ const routes = [
     meta: {
       requiresAuth: true,
     },
-    //component: () => import(/* webpackChunkName: "about" */ '../views/Razvrstaj.vue')
+
   },
   {
     path: '/kontakti',
     name: 'Kontakti',
-    component: Kontatki,
+    component: Kontakti,
     meta: {
-      requiresAuth: false,
+      requiresAuth: true,
     },
-    //component: () => import(/* webpackChunkName: "about" */ '../views/Razvrstaj.vue')
+  },
+  {
+    path: '/papir',
+    name: 'Papir',
+    component: Papir,
+    meta: {
+      requiresAuth: true,
+    },
+  },
+  {
+    path: '/plastika',
+    name: 'Plastika',
+    component: Plastika,
+    meta: {
+      requiresAuth: true,
+    },
+  },
+  {
+    path: '/mjesano',
+    name: 'Mjesano',
+    component: Mjesano,
+    meta: {
+      requiresAuth: true,
+    },
+  },
+  {
+    path: '/staklo',
+    name: 'Staklo',
+    component: Staklo,
+    meta: {
+      requiresAuth: true,
+    },
+  },
+  {
+    path: '/metal',
+    name: 'Metal',
+    component: Metal,
+    meta: {
+      requiresAuth: true,
+    },
+  },
+  {
+    path: '/tekstil',
+    name: 'Tekstil',
+    component: Tekstil,
+    meta: {
+      requiresAuth: true,
+    },
   },
 ];
 

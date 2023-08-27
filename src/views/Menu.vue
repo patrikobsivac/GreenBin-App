@@ -37,7 +37,7 @@
         a
         href="/address"
         @click="changePage('page4')"
-        >Posalji Adresu</v-btn
+        >Pošalji Adresu</v-btn
       >
       <v-btn
         large
@@ -54,11 +54,11 @@
         color="green"
         a
         href="/kontakti"
-        @click="changePage('pag6')"
+        @click="changePage('page6')"
         >Kontakti</v-btn
       >
-      <v-btn large class="mx-2" color="green" a href="/" @click="logout()"
-        >Logout</v-btn
+      <v-btn large class="mx-2" color="white" a href="/" @click="logout()"
+        ><b>Logout</b></v-btn
       >
     </div>
   </div>

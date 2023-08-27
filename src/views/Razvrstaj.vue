@@ -1,129 +1,107 @@
 <template>
-  <v-app>
-    <v-main>
-      <v-container>
-        <h1 class="headline">Katalog Otpada</h1>
-        <v-list>
-          <v-list-item-group v-model="odabranaVrsta" active-class="primary">
-            <v-list-item v-for="vrsta in vrste" :key="vrsta.naziv">
-              <v-list-item-content>
-                <v-list-item-title>{{ vrsta.naziv }}</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list-item-group>
-        </v-list>
-        <v-divider></v-divider>
-        <v-list v-if="odabranaVrsta">
-          <v-list-item-group v-model="odabraniNaziv">
-            <v-list-item v-for="naziv in odabranaVrsta.nazivi" :key="naziv">
-              <v-list-item-content>
-                <v-list-item-title>{{ naziv }}</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list-item-group>
-        </v-list>
-        <v-divider v-if="odabraniNaziv"></v-divider>
-        <div v-if="odabraniNaziv">
-          <h2 class="headline">{{ odabraniNaziv }}</h2>
-          <p>
-            <strong>Primarni izbor razvrstanja:</strong>
-            {{ odabraniNazivInfo.primarni }}
-          </p>
-          <p><strong>Alternativni izbor razvrstanja:</strong></p>
-          <ul>
-            <li
-              v-for="altIzbor in odabraniNazivInfo.alternativni"
-              :key="altIzbor"
-            >
-              {{ altIzbor }}
-            </li>
-          </ul>
-        </div>
-      </v-container>
-    </v-main>
-  </v-app>
+  <div>
+    <h1 class="headline">Katalog Otpada</h1>
+    <br />
+    <v-row>
+      <v-col cols="12" sm="6" md="4">
+        <v-card class="elevation-12">
+          <v-list-item three-line>
+            <v-list-item-content>
+              <div class="headline">Papir i karton</div>
+            </v-list-item-content>
+
+            <v-list-item-action>
+              <v-btn href="/papir" class="elevation-12">Izaberi</v-btn>
+            </v-list-item-action>
+          </v-list-item>
+        </v-card>
+      </v-col>
+
+      <v-col cols="12" sm="6" md="4">
+        <v-card class="elevation-12">
+          <v-list-item three-line>
+            <v-list-item-content>
+              <div class="headline">Plastika</div>
+            </v-list-item-content>
+
+            <v-list-item-action>
+              <v-btn href="/plastika" class="elevation-12">Izaberi</v-btn>
+            </v-list-item-action>
+          </v-list-item>
+        </v-card>
+      </v-col>
+
+      <v-col cols="12" sm="6" md="4">
+        <v-card class="elevation-12">
+          <v-list-item three-line>
+            <v-list-item-content>
+              <div class="headline">Staklo</div>
+            </v-list-item-content>
+
+            <v-list-item-action>
+              <v-btn href="/staklo" class="elevation-12">Izaberi</v-btn>
+            </v-list-item-action>
+          </v-list-item>
+        </v-card>
+      </v-col>
+
+      <v-col cols="12" sm="6" md="4">
+        <v-card class="elevation-12">
+          <v-list-item three-line>
+            <v-list-item-content>
+              <div class="headline">Mjesani Otpad</div>
+            </v-list-item-content>
+
+            <v-list-item-action>
+              <v-btn href="/mjesano" class="elevation-12">Izaberi</v-btn>
+            </v-list-item-action>
+          </v-list-item>
+        </v-card>
+      </v-col>
+
+      <v-col cols="12" sm="6" md="4">
+        <v-card class="elevation-12">
+          <v-list-item three-line>
+            <v-list-item-content>
+              <div class="headline">Metal i aluminij</div>
+            </v-list-item-content>
+
+            <v-list-item-action>
+              <v-btn href="/metal" class="elevation-12">Izaberi</v-btn>
+            </v-list-item-action>
+          </v-list-item>
+        </v-card>
+      </v-col>
+
+      <v-col cols="12" sm="6" md="4">
+        <v-card class="elevation-12">
+          <v-list-item three-line>
+            <v-list-item-content>
+              <div class="headline">Tekstil</div>
+            </v-list-item-content>
+
+            <v-list-item-action>
+              <v-btn href="/tekstil" class="elevation-12">Izaberi</v-btn>
+            </v-list-item-action>
+          </v-list-item>
+        </v-card>
+      </v-col>
+    </v-row>
+  </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      vrste: [
-        {
-          naziv: "Papir i Karton",
-          nazivi: [
-            "Adresari",
-            "Bilježnice",
-            "Cigretne kutije",
-            "Knjige",
-            "Novine",
-          ],
-          naziviInfo: {},
-        },
-        {
-          naziv: "Plastika i Metal",
-          nazivi: ["Plastične boce", "Limenke", "Vrećice"],
-          naziviInfo: {},
-        },
-        {
-          naziv: "Staklo",
-          nazivi: ["Staklene boce", "Staklenke"],
-          naziviInfo: {},
-        },
-        {
-          naziv: "Miješani Otpad",
-          nazivi: ["Plastične vrećice s otpadom", "Mokri papir"],
-          naziviInfo: {},
-        },
-        {
-          naziv: "Bio Otpad",
-          nazivi: ["Ostaci hrane", "Ljušture jaja", "Vrtlarski otpad"],
-          naziviInfo: {},
-        },
-        {
-          naziv: "Tekstil",
-          nazivi: ["Odjeća", "Posteljina", "Krpe"],
-          naziviInfo: {},
-        },
-        {
-          naziv: "Reciklažna Dvorista",
-          nazivi: ["Reciklažna Dvorista"],
-          naziviInfo: {
-            "Reciklažna Dvorista": {
-              primarni: "Reciklirajte na reciklažnim dvorištima",
-              alternativni: ["Zeleni Otok"],
-            },
-          },
-        },
-        {
-          naziv: "Ostalo",
-          nazivi: ["Ostalo"],
-          naziviInfo: {
-            Ostalo: {
-              primarni:
-                "Razvrstajte prema uputama lokalnog centra za prikupljanje otpada",
-              alternativni: [],
-            },
-          },
-        },
-      ],
-      odabranaVrsta: null,
-      odabraniNaziv: null,
-      odabraniNazivInfo: null,
-    };
-  },
-  watch: {
-    odabranaVrsta() {
-      this.odabraniNaziv = null;
-      this.odabraniNazivInfo = null;
-    },
-  },
-  methods: {
-    prikaziDetalje(naziv) {
-      this.odabraniNaziv = naziv;
-      const vrsta = this.vrste.find((v) => v.naziv === this.odabranaVrsta);
-      this.odabraniNazivInfo = vrsta ? vrsta.naziviInfo[naziv] : null;
-    },
-  },
+  name: "KatalogOtpada",
+  data: () => ({
+    items: [
+      { title: "Papir i Karton" },
+      { title: "Plastika" },
+      { title: "Staklo" },
+      { title: "Mijesani Otpad" },
+      { title: "Metal i aluminij" },
+      { title: "Tekstil" },
+    ],
+  }),
 };
 </script>

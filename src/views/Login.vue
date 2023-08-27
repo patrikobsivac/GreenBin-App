@@ -35,7 +35,7 @@
               <v-btn
                 type="submit"
                 @click="login()"
-                :disabled="username.length == 0 || password.length < 3"
+                :disabled="username.length == 0 || password.length < 4"
                 class="rounded-0"
                 color="#ffffff"
                 background-color="#00000"
@@ -93,7 +93,7 @@ export default {
   methods: {
     login() {
       if (this.username.length == 0 || this.password.length < 3) {
-        this.alertMessage = "Molimo vas ispuniti oba polja za prijavu!";
+        this.alertMessage = "Molimo vas da ispunite oba polja za prijavu!";
         this.showAlert = true;
       } else {
         console.log("login..." + this.username);
