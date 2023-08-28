@@ -15,13 +15,6 @@
         </v-col>
         <v-col cols="10">
           <v-text-field
-            label="Pregled prijave"
-            v-model="pregledprijave"
-            outlined
-          />
-        </v-col>
-        <v-col cols="10">
-          <v-text-field
             label="Pregled adrese"
             v-model="pregledAdrese"
             outlined
