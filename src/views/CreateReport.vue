@@ -26,9 +26,7 @@
     </div>
     <div class="row">
       <div class="col-lg-10 mx-auto">
-        <v-btn type="button" @click="posaljiAdresu('neki radnik')"
-          >Pošalji adresu
-        </v-btn>
+        <v-btn type="button" to="/address">Pošalji adresu </v-btn>
       </div>
     </div>
     <div class="row">

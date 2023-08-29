@@ -18,8 +18,7 @@
       </v-col>
     </v-row>
     <v-btn
-      a
-      href="/menu"
+      to="/menu"
       @click="calculateRoute"
       :disabled="start_point === '' || end_point === ''"
     >

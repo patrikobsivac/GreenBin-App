@@ -69,7 +69,7 @@
               <v-list-item-content> Pernati jastuci </v-list-item-content>
             </v-list-item> </v-list
           ><br />
-          <v-btn href="/razvrstaj" class="elevation-12" color="green"
+          <v-btn to="/razvrstaj" class="elevation-12" color="green"
             >Natrag</v-btn
           >
         </v-col>

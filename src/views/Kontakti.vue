@@ -12,8 +12,12 @@
             <p><strong>Email:</strong> pobsivac@unipu.hr</p>
           </v-card-text>
           <v-card-actions class="justify-center">
-            <a href="/menu" class="v-btn v-btn--contained v-btn--primary"
-              >Natrag</a
+            <v-btn
+              large
+              class="v-btn v-btn--contained v-btn--primary"
+              color="green"
+              to="/menu"
+              >NATRAG</v-btn
             >
           </v-card-actions>
         </v-card>

@@ -26,8 +26,7 @@
         :items="items"
         color="green"
         @click="getStatus"
-        a
-        href="/menu"
+        to="/menu"
         >Status</v-btn
       >
     </v-form>

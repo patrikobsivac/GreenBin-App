@@ -6,9 +6,7 @@
       <v-btn large class="mx-2" color="green" to="/report">Prijava Smeća</v-btn>
       <v-btn large class="mx-2" color="green" to="/route">Ruta smeća</v-btn>
       <v-btn large class="mx-2" color="green" to="/status">Status</v-btn>
-      <v-btn large class="mx-2" color="green" to="/address"
-        >Pošalji Adresu</v-btn
-      >
+
       <v-btn large class="mx-2" color="green" to="/razvrstaj">Razvrstaj</v-btn>
       <v-btn large class="mx-2" color="green" to="/kontakti">Kontakti</v-btn>
       <v-btn large class="mx-2" color="white" @click="logout()"
