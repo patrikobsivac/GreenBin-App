@@ -11,7 +11,7 @@
             </v-list-item-content>
 
             <v-list-item-action>
-              <v-btn href="/papir" class="elevation-12">Izaberi</v-btn>
+              <v-btn to="/papir" class="elevation-12">Izaberi</v-btn>
             </v-list-item-action>
           </v-list-item>
         </v-card>
@@ -25,7 +25,7 @@
             </v-list-item-content>
 
             <v-list-item-action>
-              <v-btn href="/plastika" class="elevation-12">Izaberi</v-btn>
+              <v-btn to="/plastika" class="elevation-12">Izaberi</v-btn>
             </v-list-item-action>
           </v-list-item>
         </v-card>
@@ -39,7 +39,7 @@
             </v-list-item-content>
 
             <v-list-item-action>
-              <v-btn href="/staklo" class="elevation-12">Izaberi</v-btn>
+              <v-btn to="/staklo" class="elevation-12">Izaberi</v-btn>
             </v-list-item-action>
           </v-list-item>
         </v-card>
@@ -53,7 +53,7 @@
             </v-list-item-content>
 
             <v-list-item-action>
-              <v-btn href="/mjesano" class="elevation-12">Izaberi</v-btn>
+              <v-btn to="/mjesano" class="elevation-12">Izaberi</v-btn>
             </v-list-item-action>
           </v-list-item>
         </v-card>
@@ -67,7 +67,7 @@
             </v-list-item-content>
 
             <v-list-item-action>
-              <v-btn href="/metal" class="elevation-12">Izaberi</v-btn>
+              <v-btn to="/metal" class="elevation-12">Izaberi</v-btn>
             </v-list-item-action>
           </v-list-item>
         </v-card>
@@ -81,7 +81,7 @@
             </v-list-item-content>
 
             <v-list-item-action>
-              <v-btn href="/tekstil" class="elevation-12">Izaberi</v-btn>
+              <v-btn to="/tekstil" class="elevation-12">Izaberi</v-btn>
             </v-list-item-action>
           </v-list-item>
         </v-card>

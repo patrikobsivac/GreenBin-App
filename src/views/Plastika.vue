@@ -15,7 +15,7 @@
           <v-list class="pa-4">
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
                 Sredstva za čišćenje i pranje
@@ -24,7 +24,7 @@
 
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
                 Boce za osvježavajuće napitke i plastični
@@ -34,7 +34,7 @@
 
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
                 Zaštitna plastična ambalaža
@@ -43,14 +43,14 @@
 
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Knjige </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Ambalaža od papira </v-list-item-content>
             </v-list-item>
@@ -67,7 +67,7 @@
           <v-list class="pa-4">
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>clear</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
                 Ambalaže sprejeva, ambalaže kemikalija
@@ -76,21 +76,21 @@
 
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>clear</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Plastične igračke </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>clear</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
                 Ambalaža onečišćena opasnim tvarima
               </v-list-item-content>
             </v-list-item> </v-list
           ><br />
-          <v-btn href="/razvrstaj" class="elevation-12" color="green"
+          <v-btn to="/razvrstaj" class="elevation-12" color="green"
             >Natrag</v-btn
           >
         </v-col>

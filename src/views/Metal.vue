@@ -15,7 +15,7 @@
           <v-list class="pa-4">
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
                 Aluminijska folija, poklopci čaša i jogurta
@@ -24,7 +24,7 @@
 
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
                 Limenke pića i prehrambenih proizvoda
@@ -43,7 +43,7 @@
           <v-list class="pa-4">
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>clear</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
                 Limenke pod tlakom (npr. sprejevi i dezodoransi)
@@ -52,14 +52,14 @@
 
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>clear</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
                 Metalna ambalaža boja, ulja i pesticida
               </v-list-item-content>
             </v-list-item> </v-list
           ><br />
-          <v-btn href="/razvrstaj" class="elevation-12" color="green"
+          <v-btn to="/razvrstaj" class="elevation-12" color="green"
             >Natrag</v-btn
           >
         </v-col>

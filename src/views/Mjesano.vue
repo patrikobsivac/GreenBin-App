@@ -15,21 +15,21 @@
           <v-list class="pa-4">
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Ostaci hrane </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Prljavi papir </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Kozmetički proizvodi </v-list-item-content>
             </v-list-item>
@@ -46,26 +46,26 @@
           <v-list class="pa-4">
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>clear</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Staklo </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>clear</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Baterije </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>clear</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Papiri karton </v-list-item-content>
             </v-list-item> </v-list
           ><br />
-          <v-btn href="/razvrstaj" class="elevation-12" color="green"
+          <v-btn to="/razvrstaj" class="elevation-12" color="green"
             >Natrag</v-btn
           >
         </v-col>

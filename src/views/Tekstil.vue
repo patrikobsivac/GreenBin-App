@@ -15,7 +15,7 @@
           <v-list class="pa-4">
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
                 Suha odjeća (košulje, hlače i kaputi)
@@ -24,7 +24,7 @@
 
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
                 Kućanski tekstil (ručnici i krpe)
@@ -33,7 +33,7 @@
 
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Obuća </v-list-item-content>
             </v-list-item>
@@ -50,21 +50,21 @@
           <v-list class="pa-4">
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>clear</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Popluni </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>clear</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Mokra odjeća i obuća </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>clear</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Pernati jastuci </v-list-item-content>
             </v-list-item> </v-list

@@ -15,35 +15,35 @@
           <v-list class="pa-4">
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Novine i časopisi </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Katalozi i prospekti </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Pisma </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Knjige </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>done</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Ambalaža od papira </v-list-item-content>
             </v-list-item>
@@ -60,40 +60,40 @@
           <v-list class="pa-4">
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>clear</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Fotografije </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>clear</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Prljavi papir </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>clear</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Gumirane etikete </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>clear</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Samoljepljiva folija </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>clear</v-icon>
+                <v-icon dark>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Ambalaža od mlijeka </v-list-item-content>
             </v-list-item> </v-list
           ><br />
-          <v-btn href="/razvrstaj" class="elevation-12" color="green"
+          <v-btn to="/razvrstaj" class="elevation-12" color="green"
             >Natrag</v-btn
           >
         </v-col>
