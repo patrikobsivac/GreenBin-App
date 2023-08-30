@@ -1,6 +1,5 @@
 <template>
   <div>
-    <GoBack />
     <v-row align="center" justify="center">
       <v-col cols="12">
         <v-card>
@@ -17,7 +16,11 @@
             </v-row>
             <v-row>
               <v-col cols="12" align="center">
-                <v-btn a href="/menu" color="green" @click="saveAddress()"
+                <v-btn
+                  to="/report"
+                  color="green"
+                  style="color: white"
+                  @click="saveAddress()"
                   >Spremi adresu</v-btn
                 >
               </v-col>
@@ -31,7 +34,7 @@
 
 <script>
 import GoBack from "@/components/GoBack";
-import { db } from "/firebase.js";
+import { db, doc } from "/firebase.js";
 export default {
   components: {
     GoBack,

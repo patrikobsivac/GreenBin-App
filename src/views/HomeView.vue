@@ -12,22 +12,12 @@
       <h1 class="display-4">Green Bin</h1>
       <p class="lead">Web aplikacija za rasporeda odvoza otpada</p>
       <v-row class="py-5" justify="center">
-        <v-btn
-          color="green"
-          class="mx-4"
-          a
-          href="/login"
-          style="color: white"
-          >{{ loginBtnText }}</v-btn
-        >
-        <v-btn
-          color="white"
-          class="mx-4"
-          a
-          href="/signup"
-          style="color: black"
-          >{{ signupBtnText }}</v-btn
-        >
+        <v-btn color="green" class="mx-4" to="/login" style="color: white">{{
+          loginBtnText
+        }}</v-btn>
+        <v-btn color="white" class="mx-4" to="/signup" style="color: black">{{
+          signupBtnText
+        }}</v-btn>
       </v-row>
     </v-main>
   </v-app>

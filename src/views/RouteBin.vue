@@ -1,7 +1,6 @@
 <template>
   <v-container class="text-center">
     <h1>Ruta smeća</h1>
-    <GoBack />
     <v-row align="center">
       <v-col>
         <v-text-field label="Id rute" v-model="id_route"></v-text-field>
@@ -24,11 +23,17 @@
     >
       Izračunaj rutu
     </v-btn>
+    <div class="col-lg-10 mx-auto">
+      <v-btn type="button" color="green" style="color: white" to="/menu"
+        >Natrag</v-btn
+      >
+    </div>
   </v-container>
 </template> 
 
 <script>
 import GoBack from "@/components/GoBack";
+import { db } from "/firebase.js";
 export default {
   components: {
     GoBack,

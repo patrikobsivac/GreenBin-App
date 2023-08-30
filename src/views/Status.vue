@@ -1,7 +1,6 @@
 <template>
   <v-container fluid>
     <h1>Prikupljanje smeća</h1>
-    <GoBack />
     <v-form>
       <v-row justify="center">
         <v-col cols="10">
@@ -26,6 +25,7 @@
         :items="items"
         color="green"
         @click="getStatus"
+        style="color: white"
         to="/menu"
         >Status</v-btn
       >

@@ -44,7 +44,7 @@
                 x-large
                 block
                 light
-                >Prijava</v-btn
+                >Prijavi</v-btn
               >
               <v-alert
                 :value="showAlert"
@@ -54,19 +54,10 @@
               >
                 {{ alertMessage }}
               </v-alert>
-              <v-card-actions
-                class="text--secondary d-flex justify-center"
-                color="secondary"
-              >
+              <v-card-actions class="text--secondary">
+                <v-spacer></v-spacer>
                 Nemate račun?
-                <router-link
-                  :to="{ name: 'SignUp' }"
-                  class="pl-2"
-                  style="color: black"
-                  target="_blank"
-                  a
-                  href="/signup"
-                >
+                <router-link to="/signup" class="pl-2" style="color: black">
                   Registrirajte se
                 </router-link>
               </v-card-actions>

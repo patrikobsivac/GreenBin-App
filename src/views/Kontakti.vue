@@ -2,10 +2,9 @@
   <v-app>
     <v-main>
       <v-container>
-        <h1 class="headline">Kontakti</h1>
         <v-card>
           <v-card-title class="justify-center"
-            ><b>Kontakt informacije</b></v-card-title
+            ><b>Kontaktiraj me</b></v-card-title
           >
           <v-card-text>
             <p><strong>Broj mobitela:</strong> +385 91 123 4567</p>
@@ -16,6 +15,7 @@
               large
               class="v-btn v-btn--contained v-btn--primary"
               color="green"
+              style="color: white"
               to="/menu"
               >NATRAG</v-btn
             >

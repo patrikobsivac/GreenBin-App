@@ -86,6 +86,16 @@
           </v-list-item>
         </v-card>
       </v-col>
+      <v-col
+        ><br />
+        <v-btn
+          to="/menu"
+          color="green"
+          style="color: white"
+          class="elevation-12"
+          >Natrag</v-btn
+        >
+      </v-col>
     </v-row>
   </div>
 </template>

@@ -74,10 +74,10 @@
               </v-btn>
               <v-card-actions class="text--secondary">
                 <v-spacer></v-spacer>
-                Već imate račun?
-                <a href="/login" class="pl-2" style="color: black"
-                  >Prijavite se</a
-                >
+                Več imate račun?
+                <router-link to="/login" class="pl-2" style="color: black">
+                  Prijavite se
+                </router-link>
               </v-card-actions>
             </v-form>
           </v-card-text>

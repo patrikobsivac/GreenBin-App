@@ -65,7 +65,11 @@
               <v-list-item-content> Papiri karton </v-list-item-content>
             </v-list-item> </v-list
           ><br />
-          <v-btn to="/razvrstaj" class="elevation-12" color="green"
+          <v-btn
+            to="/razvrstaj"
+            class="elevation-12"
+            color="green"
+            style="color: white"
             >Natrag</v-btn
           >
         </v-col>

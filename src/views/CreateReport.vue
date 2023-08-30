@@ -1,6 +1,5 @@
 <template>
   <div class="text-center">
-    <GoBack />
     <div class="row">
       <div class="col-lg-10 mx-auto">
         <h1>Prijava kante za smeće</h1>
@@ -36,10 +35,16 @@
           @click="provjeriPrijavu()"
           :disabled="!checkForm()"
           color="success"
-          a
-          href="/menu"
+          to="/menu"
           >Prijavi
         </v-btn>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <v-btn type="button" color="green" style="color: white" to="/menu"
+          >Natrag</v-btn
+        >
       </div>
     </div>
   </div>
