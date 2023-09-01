@@ -49,7 +49,7 @@
         <v-card class="elevation-12">
           <v-list-item three-line>
             <v-list-item-content>
-              <div class="headline">Mjesani Otpad</div>
+              <div class="headline">Mješani Otpad</div>
             </v-list-item-content>
 
             <v-list-item-action>

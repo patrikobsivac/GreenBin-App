@@ -15,21 +15,21 @@
           <v-list class="pa-4">
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>*</v-icon>
+                <v-icon>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Ostaci hrane </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>*</v-icon>
+                <v-icon>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Prljavi papir </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>*</v-icon>
+                <v-icon>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Kozmetički proizvodi </v-list-item-content>
             </v-list-item>
@@ -46,21 +46,21 @@
           <v-list class="pa-4">
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>*</v-icon>
+                <v-icon>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Staklo </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>*</v-icon>
+                <v-icon>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Baterije </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>*</v-icon>
+                <v-icon>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Papiri karton </v-list-item-content>
             </v-list-item> </v-list

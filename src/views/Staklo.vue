@@ -15,21 +15,21 @@
           <v-list class="pa-4">
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>*</v-icon>
+                <v-icon>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Staklene čaše </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>*</v-icon>
+                <v-icon>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Staklene boce </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="primary--text">
-                <v-icon dark>*</v-icon>
+                <v-icon>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Staklenke </v-list-item-content>
             </v-list-item>
@@ -46,21 +46,21 @@
           <v-list class="pa-4">
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>*</v-icon>
+                <v-icon>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Ogledala </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>*</v-icon>
+                <v-icon>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Neonske svjetiljke </v-list-item-content>
             </v-list-item>
 
             <v-list-item>
               <v-list-item-icon class="error--text">
-                <v-icon dark>*</v-icon>
+                <v-icon>*</v-icon>
               </v-list-item-icon>
               <v-list-item-content> Prozorsko staklo </v-list-item-content>
             </v-list-item> </v-list

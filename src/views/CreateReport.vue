@@ -88,7 +88,7 @@ export default {
     },
 
     provjeriPrijavu() {
-      console.log(" Prijava je provjerena");
+      console.log("Prijava je provjerena");
     },
     checkForm: function () {
       if (

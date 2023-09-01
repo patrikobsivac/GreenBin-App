@@ -47,7 +47,7 @@ export default {
       const addressRef = db.collection("addresses").doc(this.address);
       const addressDoc = await addressRef.get();
       if (addressDoc.exists) {
-        alert("Adresa vec postoji!");
+        alert("Adresa već postoji!");
         return;
       }
       addressRef
@@ -55,10 +55,10 @@ export default {
           address: this.address,
         })
         .then(() => {
-          alert("Adresa uspjesno spremljena!");
+          alert("Adresa uspješno spremljena!");
         })
         .catch((error) => {
-          alert(`Greska: ${error.message}`);
+          alert(`Greška: ${error.message}`);
         });
     },
   },
