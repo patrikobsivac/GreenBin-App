@@ -52,7 +52,7 @@
 
 <script>
 import GoBack from "@/components/GoBack";
-import { doc, db } from "/firebase.js";
+import { doc, db, collection } from "/firebase.js";
 export default {
   components: {
     GoBack,
