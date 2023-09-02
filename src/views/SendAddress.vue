@@ -34,7 +34,7 @@
 
 <script>
 import GoBack from "@/components/GoBack";
-import { db, doc } from "/firebase.js";
+import { db, doc, collection } from "/firebase.js";
 export default {
   components: {
     GoBack,
