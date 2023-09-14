@@ -88,30 +88,62 @@
 </template>
 
 <script>
-import { createUserWithEmailAndPassword, auth, db } from "/firebase.js";
+import {
+  doc,
+  setDoc,
+  auth,
+  db,
+  createUserWithEmailAndPassword,
+} from "/firebase.js";
 export default {
   name: "Signup",
+  components: {},
   data() {
     return {
-      name: "",
-      username: "",
-      password: "",
+      isButtonDisabled: false,
+      name: null,
+      username: null,
+      password: null,
       passwordRepeat: "",
+      rules: {
+        required: (value) => !!value || "Required.",
+        email: (v) =>
+          !v ||
+          /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) ||
+          "E-mail mora bit valjan!",
+      },
     };
   },
+  created() {},
+  mounted() {},
+  destroyed() {},
   methods: {
+    postActionMoveToView() {
+      this.$router.push({ path: "/login" });
+    },
+    async saveAdditionalData(user, username, name) {
+      await setDoc(doc(db, "korisnici", username), {
+        Email: username,
+        Name: name,
+        AuthorisationType: "Korisnik",
+      });
+    },
     signup() {
-      createUserWithEmailAndPassword(auth, this.username, this.password)
-        .then(function () {
-          console.log("Uspješna registracija");
+      debugger;
+      const username = this.username;
+      const password = this.password;
+      createUserWithEmailAndPassword(auth, username, password)
+        .then((userCredential) => {
+          alert("Uspješno registrirano.");
+          console.log(userCredential);
+          const user = userCredential.user;
+          const name = this.name;
+          this.saveAdditionalData(user, username, name);
+          this.postActionMoveToView();
         })
-        .then(() => {
-          this.$router.push({ path: "/login" });
-        })
-        .catch(function (error) {
-          console.error("Došlo je do greške", error);
+        .catch((error) => {
+          alert("Došlo je do pogreške", error);
         });
-      console.log("Nastavak");
     },
   },
 };

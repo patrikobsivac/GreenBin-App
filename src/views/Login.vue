@@ -70,32 +70,38 @@
 </template>
 
 <script>
-import { signInWithEmailAndPassword, auth, db } from "/firebase.js";
+import { signInWithEmailAndPassword, auth } from "/firebase.js";
+import store from "@/store";
 export default {
-  name: "login",
+  name: "Login",
   data() {
     return {
       username: "",
       password: "",
       showAlert: false,
       alertMessage: "",
+      store: store,
+      rules: {
+        required: (value) => !!value || "Required.",
+        email: (v) =>
+          !v ||
+          /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) ||
+          "E-mail must be valid",
+      },
     };
   },
   methods: {
-    login() {
-      if (this.username.length == 0 || this.password.length < 3) {
-        this.alertMessage = "Molimo vas da ispunite oba polja za prijavu!";
-        this.showAlert = true;
-      } else {
-        console.log("login..." + this.username);
-        signInWithEmailAndPassword(auth, this.username, this.password)
-          .then((result) => {
-            console.log("Uspješna prijava", result);
-            this.$router.push({ path: "/menu" });
-          })
-          .catch(function (e) {
-            console.error("Greška", e);
-          });
+    async login() {
+      try {
+        let fdbk = await signInWithEmailAndPassword(
+          auth,
+          this.username,
+          this.password
+        );
+        console.log("Prijavljen/a", fdbk);
+        this.$router.push("/menu");
+      } catch (error) {
+        console.error(error);
       }
     },
   },

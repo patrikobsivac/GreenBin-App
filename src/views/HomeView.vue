@@ -39,7 +39,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: #181a1b; */
 }
 
 .py-5 {
@@ -52,7 +51,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: #232425; */
   background-color: #dedede;
 }
 

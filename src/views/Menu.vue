@@ -45,17 +45,16 @@
 <script>
 import { signOut, auth } from "/firebase.js";
 export default {
+  name: "Menu",
   methods: {
-    logout() {
-      firebase
-        .auth()
-        .signOut()
-        .then(() => {
-          this.$router.push({ name: "home" });
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+    async logout() {
+      try {
+        let feedback = await signOut(auth);
+        this.$router.push("/");
+        console.log("Odjavljen/a", feedback);
+      } catch (error) {
+        console.error(error);
+      }
     },
   },
 };
